@@ -1,0 +1,4 @@
+api/node_modules/
+api/tasks_db/node_modules/
+terraform/*.tfstate*
+terraform/.terraform/

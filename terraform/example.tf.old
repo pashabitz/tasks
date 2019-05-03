@@ -1,0 +1,30 @@
+provider "aws" {
+  access_key = "${var.access_key}"
+  secret_key = "${var.secret_key}"
+  region     = "${var.region}"
+}
+
+
+resource "aws_instance" "example" {
+  ami           = "${lookup(var.amis, var.region)}"
+  instance_type = "t2.micro"
+  subnet_id = "subnet-0b72087c"
+
+  provisioner "local-exec" {
+    command = "echo ${aws_instance.example.public_ip} > ip_address.txt"
+  }
+}
+resource "aws_eip" "ip" {
+  vpc = true
+}
+
+resource "aws_eip_association" "eip_assoc" {
+  instance_id   = "${aws_instance.example.id}"
+  allocation_id = "${aws_eip.ip.id}"
+}
+output "ami" {
+  value = "${lookup(var.amis, var.region)}"
+}
+output "ip" {
+  value = "${aws_eip.ip.public_ip}"
+}
