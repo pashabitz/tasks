@@ -1,9 +1,29 @@
 {
-  "development": {
+  "docker_mac": {
     "username": "tasks_app",
     "password": "password1",
     "database": "tasks",
     "host": "docker.for.mac.localhost",
+    "dialect": "mysql",
+	"define": {
+		"timestamps": false
+	}
+  },
+  "mac": {
+    "username": "tasks_app",
+    "password": "password1",
+    "database": "tasks",
+    "host": "localhost",
+    "dialect": "mysql",
+	"define": {
+		"timestamps": false
+	}
+  },
+  "development": {
+    "username": "tasks_app",
+    "password": "password1",
+    "database": "tasks",
+    "host": "tasks-dev.cyn0jqxa7xi0.us-west-2.rds.amazonaws.com",
     "dialect": "mysql",
 	"define": {
 		"timestamps": false

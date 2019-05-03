@@ -17,6 +17,9 @@ Resources:
       CodeUri: ./
       Handler: index.getTask
       Runtime: nodejs8.10
+      Environment:
+        Variables:
+          NODE_ENV:
       Events:
         ApiRequest:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
@@ -30,6 +33,9 @@ Resources:
       CodeUri: ./
       Handler: index.createTask
       Runtime: nodejs8.10
+      Environment:
+        Variables:
+          NODE_ENV:
       Events:
         ApiRequest:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
@@ -43,6 +49,9 @@ Resources:
       CodeUri: ./
       Handler: index.completeTask
       Runtime: nodejs8.10
+      Environment:
+        Variables:
+          NODE_ENV:
       Events:
         ApiRequest:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
