@@ -19,7 +19,7 @@ Resources:
       Runtime: nodejs8.10
       Environment:
         Variables:
-          NODE_ENV:
+          NODE_ENV: development
       Events:
         ApiRequest:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
@@ -35,7 +35,7 @@ Resources:
       Runtime: nodejs8.10
       Environment:
         Variables:
-          NODE_ENV:
+          NODE_ENV: development
       Events:
         ApiRequest:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
@@ -51,7 +51,7 @@ Resources:
       Runtime: nodejs8.10
       Environment:
         Variables:
-          NODE_ENV:
+          NODE_ENV: development
       Events:
         ApiRequest:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
