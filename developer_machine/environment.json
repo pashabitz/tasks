@@ -1,0 +1,11 @@
+{
+	"GetTaskFunction": {
+	"NODE_ENV": "docker_mac"
+	},
+	"CreateTaskFunction": {
+	"NODE_ENV": "docker_mac"
+	},
+	"CompleteTaskFunction": {
+	"NODE_ENV": "docker_mac"
+	}
+}
